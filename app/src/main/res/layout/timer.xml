@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue">
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_bar"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTextView"
+        android:text=" "
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="64sp"/>
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:layout_below="@id/timerTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_below="@id/timerTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/resttimerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:layout_below="@id/stopButton"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:textSize="64sp"/>
+
+    <TextView
+        android:id="@+id/yourRestTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/resttimerTextView"
+        android:textStyle="italic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/red"
+        android:textSize="24sp"/>
+
+
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/workoutNextTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resttimerTextView"
+        android:textStyle="italic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+
+        android:text="Pick your next set!"
+        android:layout_marginBottom="0dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/workoutNextTextView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="5dp">
+
+    <TextView
+        android:id="@+id/workoutTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:onClick="BurpeesOnClick"
+        android:text="-- Burpees --"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/workoutPushUpTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:onClick="PushUpOnClick"
+        android:text="-- Push-up --"
+
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/workoutNextTextView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="48dp">
+
+        <TextView
+            android:id="@+id/workoutSitUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:onClick="SitUpOnClick"
+            android:text="-- Sit-up --"
+
+            android:layout_marginRight="16dp"/>
+
+        <TextView
+            android:id="@+id/PlankTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+
+            android:onClick="JumpingJackOnClick"
+            android:text="-- Jumping Jack --"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/totalworkoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:onClick="OnExit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="520dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:max="100"
+        android:progress="0"
+        android:layout_marginTop="32dp"
+        android:visibility="visible"/>
+
+</RelativeLayout>
